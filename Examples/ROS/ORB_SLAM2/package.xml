@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<package format="2">
+    <name>ORB_SLAM2</name>
+    <version>0.0.1</version>
+    <description>orb_slam2 </description>
+    <author>kint.zhao</author>
+    <maintainer email="zhao.yonghua@chinaredstar.cn">kint.zhao</maintainer>
+    <url>http://wiki.ros.org/map_server</url>
+    <license>BSD</license>
+
+    <buildtool_depend version_gte="0.5.68">catkin</buildtool_depend>
+
+    <depend>roscpp</depend>
+    <depend>tf</depend>
+    <depend>sensor_msgs</depend>
+    <depend>image_transport</depend>
+    <depend>cv_bridge</depend>
+
+</package>

@@ -1,0 +1,16 @@
+<launch>
+  <arg name="path_voc" default="/home/robot/ros_ws/vslam/src/ORB_SLAM2/Vocabulary/ORBvoc.txt"/>
+  <arg name="path_conf" default="/home/robot/ros_ws/vslam/src/ORB_SLAM2/Examples/ROS/ORB_SLAM2/conf/r415_mono_zb.yaml"/>
+
+  <arg name="image_rgb" default="/camera/color/image_raw"/>
+  <arg name="image_depth" default="/camera/depth/image_rect_raw"/>
+
+  <include file="$(find realsense2_camera)/launch/rs_camera.launch"/>
+
+  <node name="ORB_SLAM2" pkg="ORB_SLAM2" type="RGBD" output="screen"   args=" $(arg path_voc) $(arg path_conf) ">
+ 	<remap from="/image_rgb" to="$(arg image_rgb)"/>
+ 	<remap from="/image_depth" to="$(arg image_depth)"/>
+  </node>
+
+
+</launch>

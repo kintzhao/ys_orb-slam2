@@ -1,0 +1,80 @@
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~$ rosrun camera_calibration cameracalibrator.py --size 9x6 --square 0.2 image:=/usb_camera/image_raw
+^CQObject::~QObject: Timers cannot be stopped from another thread
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~$ ^C
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~$ rosrun camera_calibration cameracalibrator.py --size 9x6 --square 0.2 image:=/camera/color/image_raw*** Added sample 1, p_x = 0.537, p_y = 0.512, p_size = 0.206, skew = 0.058
+*** Added sample 2, p_x = 0.591, p_y = 0.465, p_size = 0.188, skew = 0.170
+*** Added sample 3, p_x = 0.598, p_y = 0.459, p_size = 0.178, skew = 0.371
+*** Added sample 4, p_x = 0.568, p_y = 0.572, p_size = 0.154, skew = 0.418
+*** Added sample 5, p_x = 0.323, p_y = 0.499, p_size = 0.194, skew = 0.001
+*** Added sample 6, p_x = 0.122, p_y = 0.378, p_size = 0.180, skew = 0.116
+*** Added sample 7, p_x = 0.045, p_y = 0.351, p_size = 0.159, skew = 0.199
+*** Added sample 8, p_x = 0.061, p_y = 0.440, p_size = 0.140, skew = 0.457
+*** Added sample 9, p_x = 0.131, p_y = 0.295, p_size = 0.149, skew = 0.384
+*** Added sample 10, p_x = 0.639, p_y = 0.491, p_size = 0.170, skew = 0.006
+*** Added sample 11, p_x = 0.672, p_y = 0.506, p_size = 0.153, skew = 0.213
+*** Added sample 12, p_x = 0.623, p_y = 0.788, p_size = 0.165, skew = 0.158
+*** Added sample 13, p_x = 0.566, p_y = 0.857, p_size = 0.164, skew = 0.069
+*** Added sample 14, p_x = 0.594, p_y = 0.696, p_size = 0.140, skew = 0.236
+*** Added sample 15, p_x = 0.579, p_y = 0.710, p_size = 0.134, skew = 0.456
+*** Added sample 16, p_x = 0.522, p_y = 0.693, p_size = 0.155, skew = 0.028
+*** Added sample 17, p_x = 0.564, p_y = 0.191, p_size = 0.143, skew = 0.108
+*** Added sample 18, p_x = 0.584, p_y = 0.217, p_size = 0.133, skew = 0.285
+*** Added sample 19, p_x = 0.585, p_y = 0.221, p_size = 0.130, skew = 0.495
+*** Added sample 20, p_x = 0.778, p_y = 0.225, p_size = 0.135, skew = 0.035
+*** Added sample 21, p_x = 0.857, p_y = 0.145, p_size = 0.137, skew = 0.113
+*** Added sample 22, p_x = 0.844, p_y = 0.114, p_size = 0.135, skew = 0.272
+*** Added sample 23, p_x = 0.854, p_y = 0.244, p_size = 0.151, skew = 0.348
+*** Added sample 24, p_x = 0.848, p_y = 0.404, p_size = 0.157, skew = 0.138
+*** Added sample 25, p_x = 0.794, p_y = 0.529, p_size = 0.171, skew = 0.039
+*** Added sample 26, p_x = 0.524, p_y = 0.431, p_size = 0.148, skew = 0.110
+*** Added sample 27, p_x = 0.564, p_y = 0.420, p_size = 0.142, skew = 0.266
+*** Added sample 28, p_x = 0.560, p_y = 0.428, p_size = 0.131, skew = 0.560
+*** Added sample 29, p_x = 0.752, p_y = 0.383, p_size = 0.160, skew = 0.052
+*** Added sample 30, p_x = 0.444, p_y = 0.364, p_size = 0.143, skew = 0.204
+*** Added sample 31, p_x = 0.463, p_y = 0.420, p_size = 0.134, skew = 0.371
+*** Added sample 32, p_x = 0.420, p_y = 0.477, p_size = 0.131, skew = 0.069
+*** Added sample 33, p_x = 0.654, p_y = 0.579, p_size = 0.153, skew = 0.559
+*** Added sample 34, p_x = 0.507, p_y = 0.269, p_size = 0.148, skew = 0.039
+*** Added sample 35, p_x = 0.570, p_y = 0.319, p_size = 0.131, skew = 0.176
+*** Added sample 36, p_x = 0.733, p_y = 0.456, p_size = 0.151, skew = 0.335
+*** Added sample 37, p_x = 0.731, p_y = 0.321, p_size = 0.163, skew = 0.389
+*** Added sample 38, p_x = 0.302, p_y = 0.382, p_size = 0.150, skew = 0.063
+*** Added sample 39, p_x = 0.449, p_y = 0.570, p_size = 0.136, skew = 0.178
+*** Added sample 40, p_x = 0.445, p_y = 0.586, p_size = 0.131, skew = 0.358
+('D = ', [0.11848827132063704, -0.2718923198614575, -0.009420151006444813, -0.0017500670684688848, 0.0])
+('K = ', [613.3968621630112, 0.0, 314.96366963627105, 0.0, 607.5858048044146, 224.65893806555707, 0.0, 0.0, 1.0])
+('R = ', [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0])
+('P = ', [622.2444458007812, 0.0, 313.949268855853, 0.0, 0.0, 615.5584106445312, 221.55168839882026, 0.0, 0.0, 0.0, 1.0, 0.0])
+None
+# oST version 5.0 parameters
+
+
+[image]
+
+width
+640
+
+height
+480
+
+[narrow_stereo]
+
+camera matrix
+613.396862 0.000000 314.963670
+0.000000 607.585805 224.658938
+0.000000 0.000000 1.000000
+
+distortion
+0.118488 -0.271892 -0.009420 -0.001750 0.000000
+
+rectification
+1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 0.000000 1.000000
+
+projection
+622.244446 0.000000 313.949269 0.000000
+0.000000 615.558411 221.551688 0.000000
+0.000000 0.000000 1.000000 0.000000
+
+

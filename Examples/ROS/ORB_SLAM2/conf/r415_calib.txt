@@ -1,0 +1,159 @@
+ rosrun camera_calibration cameracalibrator.py --size 10X6 --square 0.2 image:=/camera/color/image_raw camera:=/usb_cam
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/camera_calibration/cameracalibrator.py", line 151, in <module>
+    main()
+  File "/opt/ros/kinetic/lib/camera_calibration/cameracalibrator.py", line 99, in main
+    size = tuple([int(c) for c in sz.split('x')])
+ValueError: invalid literal for int() with base 10: '10X6'
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~/ros_ws/vslam$ rosrun camera_calibration cameracalibrator.py --size 10x6 --square 0.2 image:=/camera/color/image_raw camera:=/usb_cam
+('Waiting for service', '/usb_cam/set_camera_info', '...')
+Service not found
+^C^C^C^C^C^C^C^C^C^C^C^C^C^C
+
+Segmentation fault (core dumped)
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~/ros_ws/vslam$ 
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~/ros_ws/vslam$ 
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~/ros_ws/vslam$ ^C
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~/ros_ws/vslam$ ^C
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~/ros_ws/vslam$ 
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~/ros_ws/vslam$ ^C
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~/ros_ws/vslam$ 
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~/ros_ws/vslam$ ^C
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~/ros_ws/vslam$ 
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~/ros_ws/vslam$ rosrun camera_calibration cameracalibrator.py --size 10x6 --square 0.2 image:=/camera/color/image_raw
+^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^CQObject::~QObject: Timers cannot be stopped from another thread
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~/ros_ws/vslam$ ^C
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~/ros_ws/vslam$ ^C
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~/ros_ws/vslam$ ^C
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~/ros_ws/vslam$ ^C
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~/ros_ws/vslam$ ^C
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~/ros_ws/vslam$ ^C
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~/ros_ws/vslam$ rosrun camera_calibration cameracalibrator.py --size 9x6 --square 0.2 image:=/camera/color/image_raw
+*** Added sample 1, p_x = 0.692, p_y = 0.352, p_size = 0.163, skew = 0.069
+*** Added sample 2, p_x = 0.794, p_y = 0.474, p_size = 0.146, skew = 0.001
+*** Added sample 3, p_x = 0.862, p_y = 0.605, p_size = 0.162, skew = 0.135
+*** Added sample 4, p_x = 0.917, p_y = 0.745, p_size = 0.161, skew = 0.256
+*** Added sample 5, p_x = 0.889, p_y = 0.448, p_size = 0.198, skew = 0.129
+*** Added sample 6, p_x = 0.902, p_y = 0.555, p_size = 0.174, skew = 0.007
+*** Added sample 7, p_x = 0.437, p_y = 0.566, p_size = 0.194, skew = 0.023
+*** Added sample 8, p_x = 0.198, p_y = 0.382, p_size = 0.224, skew = 0.148
+*** Added sample 9, p_x = 0.108, p_y = 0.263, p_size = 0.228, skew = 0.323
+*** Added sample 10, p_x = 0.160, p_y = 0.295, p_size = 0.227, skew = 0.038
+*** Added sample 11, p_x = 0.190, p_y = 0.316, p_size = 0.212, skew = 0.454
+*** Added sample 12, p_x = 0.204, p_y = 0.363, p_size = 0.204, skew = 0.598
+*** Added sample 13, p_x = 0.208, p_y = 0.410, p_size = 0.219, skew = 0.325
+*** Added sample 14, p_x = 0.207, p_y = 0.432, p_size = 0.230, skew = 0.010
+*** Added sample 15, p_x = 0.299, p_y = 0.335, p_size = 0.235, skew = 0.000
+*** Added sample 16, p_x = 0.304, p_y = 0.370, p_size = 0.217, skew = 0.261
+*** Added sample 17, p_x = 0.391, p_y = 0.311, p_size = 0.233, skew = 0.118
+*** Added sample 18, p_x = 0.498, p_y = 0.322, p_size = 0.231, skew = 0.251
+*** Added sample 19, p_x = 0.642, p_y = 0.392, p_size = 0.202, skew = 0.150
+*** Added sample 20, p_x = 0.858, p_y = 0.336, p_size = 0.263, skew = 0.206
+*** Added sample 21, p_x = 0.913, p_y = 0.531, p_size = 0.268, skew = 0.100
+*** Added sample 22, p_x = 0.914, p_y = 0.654, p_size = 0.257, skew = 0.014
+*** Added sample 23, p_x = 0.885, p_y = 0.767, p_size = 0.243, skew = 0.066
+*** Added sample 24, p_x = 0.908, p_y = 0.831, p_size = 0.237, skew = 0.185
+*** Added sample 25, p_x = 0.795, p_y = 0.620, p_size = 0.273, skew = 0.153
+*** Added sample 26, p_x = 0.823, p_y = 0.789, p_size = 0.253, skew = 0.304
+*** Added sample 27, p_x = 0.782, p_y = 0.827, p_size = 0.246, skew = 0.439
+*** Added sample 28, p_x = 0.692, p_y = 0.620, p_size = 0.198, skew = 0.311
+*** Added sample 29, p_x = 0.687, p_y = 0.667, p_size = 0.210, skew = 0.175
+*** Added sample 30, p_x = 0.679, p_y = 0.755, p_size = 0.253, skew = 0.106
+*** Added sample 31, p_x = 0.668, p_y = 0.709, p_size = 0.251, skew = 0.273
+*** Added sample 32, p_x = 0.340, p_y = 0.453, p_size = 0.228, skew = 0.497
+*** Added sample 33, p_x = 0.350, p_y = 0.428, p_size = 0.221, skew = 0.671
+*** Added sample 34, p_x = 0.454, p_y = 0.629, p_size = 0.244, skew = 0.194
+*** Added sample 35, p_x = 0.448, p_y = 0.713, p_size = 0.225, skew = 0.048
+*** Added sample 36, p_x = 0.486, p_y = 0.771, p_size = 0.205, skew = 0.229
+*** Added sample 37, p_x = 0.496, p_y = 0.628, p_size = 0.174, skew = 0.300
+*** Added sample 38, p_x = 0.986, p_y = 0.887, p_size = 0.234, skew = 0.296
+*** Added sample 39, p_x = 0.259, p_y = 0.534, p_size = 0.212, skew = 0.358
+*** Added sample 40, p_x = 0.285, p_y = 0.559, p_size = 0.226, skew = 0.199
+*** Added sample 41, p_x = 0.310, p_y = 0.598, p_size = 0.221, skew = 0.041
+*** Added sample 42, p_x = 0.602, p_y = 0.729, p_size = 0.183, skew = 0.141
+*** Added sample 43, p_x = 0.642, p_y = 0.684, p_size = 0.196, skew = 0.014
+*** Added sample 44, p_x = 0.650, p_y = 0.795, p_size = 0.134, skew = 0.203
+*** Added sample 45, p_x = 0.701, p_y = 0.552, p_size = 0.158, skew = 0.023
+*** Added sample 46, p_x = 0.707, p_y = 0.485, p_size = 0.161, skew = 0.196
+*** Added sample 47, p_x = 0.749, p_y = 0.649, p_size = 0.149, skew = 0.086
+*** Added sample 48, p_x = 0.659, p_y = 0.556, p_size = 0.265, skew = 0.083
+*** Added sample 49, p_x = 0.671, p_y = 0.816, p_size = 0.320, skew = 0.176
+*** Added sample 50, p_x = 0.706, p_y = 0.913, p_size = 0.361, skew = 0.014
+*** Added sample 51, p_x = 0.642, p_y = 0.757, p_size = 0.348, skew = 0.026
+*** Added sample 52, p_x = 0.563, p_y = 0.537, p_size = 0.311, skew = 0.040
+('D = ', [0.17609368208103704, -0.3562990406378959, 0.002295022444685144, -0.005770828680514582, 0.0])
+('K = ', [615.9068844636879, 0.0, 327.510226675745, 0.0, 609.5651566366636, 244.77775102213732, 0.0, 0.0, 1.0])
+('R = ', [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0])
+('P = ', [629.624267578125, 0.0, 324.7618855203182, 0.0, 0.0, 624.9178466796875, 245.65738045577018, 0.0, 0.0, 0.0, 1.0, 0.0])
+None
+# oST version 5.0 parameters
+
+
+[image]
+
+width
+640
+
+height
+480
+
+[narrow_stereo]
+
+camera matrix
+615.906884 0.000000 327.510227
+0.000000 609.565157 244.777751
+0.000000 0.000000 1.000000
+
+distortion
+0.176094 -0.356299 0.002295 -0.005771 0.000000
+
+rectification
+1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 0.000000 1.000000
+
+projection
+629.624268 0.000000 324.761886 0.000000
+0.000000 624.917847 245.657380 0.000000
+0.000000 0.000000 1.000000 0.000000
+
+
+('Wrote calibration data to', '/tmp/calibrationdata.tar.gz')
+('D = ', [0.17609368208103704, -0.3562990406378959, 0.002295022444685144, -0.005770828680514582, 0.0])
+('K = ', [615.9068844636879, 0.0, 327.510226675745, 0.0, 609.5651566366636, 244.77775102213732, 0.0, 0.0, 1.0])
+('R = ', [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0])
+('P = ', [629.624267578125, 0.0, 324.7618855203182, 0.0, 0.0, 624.9178466796875, 245.65738045577018, 0.0, 0.0, 0.0, 1.0, 0.0])
+# oST version 5.0 parameters
+
+
+[image]
+
+width
+640
+
+height
+480
+
+[narrow_stereo]
+
+camera matrix
+615.906884 0.000000 327.510227
+0.000000 609.565157 244.777751
+0.000000 0.000000 1.000000
+
+distortion
+0.176094 -0.356299 0.002295 -0.005771 0.000000
+
+rectification
+1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 0.000000 1.000000
+
+projection
+629.624268 0.000000 324.761886 0.000000
+0.000000 624.917847 245.657380 0.000000
+0.000000 0.000000 1.000000 0.000000
+
+ 
+
+

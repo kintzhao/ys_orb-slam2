@@ -1,0 +1,141 @@
+~/ros_ws/tb_sim/src/usb_cam$ rosrun camera_calibration cameracalibrator.py --size 9x6 --square 0.2 image:=/image camera:=/usb_cam 
+('Waiting for service', '/usb_cam/set_camera_info', '...')
+OK
+*** Added sample 1, p_x = 0.548, p_y = 0.382, p_size = 0.244, skew = 0.019
+*** Added sample 2, p_x = 0.567, p_y = 0.490, p_size = 0.245, skew = 0.092
+*** Added sample 3, p_x = 0.541, p_y = 0.568, p_size = 0.243, skew = 0.196
+*** Added sample 4, p_x = 0.477, p_y = 0.257, p_size = 0.246, skew = 0.136
+*** Added sample 5, p_x = 0.565, p_y = 0.215, p_size = 0.231, skew = 0.006
+*** Added sample 6, p_x = 0.474, p_y = 0.417, p_size = 0.188, skew = 0.055
+*** Added sample 7, p_x = 0.473, p_y = 0.841, p_size = 0.327, skew = 0.321
+*** Added sample 8, p_x = 0.496, p_y = 0.787, p_size = 0.334, skew = 0.194
+*** Added sample 9, p_x = 0.478, p_y = 0.831, p_size = 0.337, skew = 0.044
+*** Added sample 10, p_x = 0.506, p_y = 0.797, p_size = 0.270, skew = 0.454
+*** Added sample 11, p_x = 0.554, p_y = 0.554, p_size = 0.340, skew = 0.014
+*** Added sample 12, p_x = 0.381, p_y = 0.031, p_size = 0.302, skew = 0.202
+*** Added sample 13, p_x = 0.398, p_y = 0.200, p_size = 0.291, skew = 0.113
+*** Added sample 14, p_x = 0.416, p_y = 0.146, p_size = 0.244, skew = 0.212
+*** Added sample 15, p_x = 0.430, p_y = 0.146, p_size = 0.241, skew = 0.396
+*** Added sample 16, p_x = 0.577, p_y = 0.329, p_size = 0.237, skew = 0.166
+*** Added sample 17, p_x = 0.550, p_y = 0.482, p_size = 0.262, skew = 0.397
+*** Added sample 18, p_x = 0.461, p_y = 0.460, p_size = 0.267, skew = 0.145
+*** Added sample 19, p_x = 0.397, p_y = 0.528, p_size = 0.222, skew = 0.788
+*** Added sample 20, p_x = 0.347, p_y = 0.543, p_size = 0.236, skew = 0.645
+*** Added sample 21, p_x = 0.369, p_y = 0.539, p_size = 0.259, skew = 0.249
+*** Added sample 22, p_x = 0.573, p_y = 0.302, p_size = 0.347, skew = 0.070
+*** Added sample 23, p_x = 0.597, p_y = 0.182, p_size = 0.395, skew = 0.096
+*** Added sample 24, p_x = 0.612, p_y = 0.353, p_size = 0.429, skew = 0.176
+*** Added sample 25, p_x = 0.486, p_y = 0.700, p_size = 0.441, skew = 0.023
+*** Added sample 26, p_x = 0.490, p_y = 0.559, p_size = 0.427, skew = 0.088
+*** Added sample 27, p_x = 0.511, p_y = 0.425, p_size = 0.415, skew = 0.123
+*** Added sample 28, p_x = 0.561, p_y = 0.303, p_size = 0.387, skew = 0.270
+*** Added sample 29, p_x = 0.515, p_y = 0.396, p_size = 0.381, skew = 0.359
+*** Added sample 30, p_x = 0.479, p_y = 0.223, p_size = 0.368, skew = 0.239
+*** Added sample 31, p_x = 0.494, p_y = 0.075, p_size = 0.394, skew = 0.092
+*** Added sample 32, p_x = 0.606, p_y = 0.520, p_size = 0.313, skew = 0.160
+*** Added sample 33, p_x = 0.478, p_y = 0.681, p_size = 0.298, skew = 0.086
+*** Added sample 34, p_x = 0.466, p_y = 0.622, p_size = 0.280, skew = 0.562
+*** Added sample 35, p_x = 0.669, p_y = 0.472, p_size = 0.355, skew = 0.231
+*** Added sample 36, p_x = 0.552, p_y = 0.617, p_size = 0.390, skew = 0.146
+*** Added sample 37, p_x = 0.639, p_y = 0.580, p_size = 0.401, skew = 0.068
+*** Added sample 38, p_x = 0.599, p_y = 0.719, p_size = 0.336, skew = 0.028
+*** Added sample 39, p_x = 0.430, p_y = 0.895, p_size = 0.222, skew = 0.320
+*** Added sample 40, p_x = 0.438, p_y = 0.862, p_size = 0.247, skew = 0.141
+*** Added sample 41, p_x = 0.590, p_y = 0.959, p_size = 0.284, skew = 0.150
+*** Added sample 42, p_x = 0.614, p_y = 0.661, p_size = 0.269, skew = 0.134
+*** Added sample 43, p_x = 0.711, p_y = 0.336, p_size = 0.268, skew = 0.128
+*** Added sample 44, p_x = 0.747, p_y = 0.396, p_size = 0.242, skew = 0.209
+*** Added sample 45, p_x = 0.738, p_y = 0.404, p_size = 0.232, skew = 0.413
+*** Added sample 46, p_x = 0.667, p_y = 0.528, p_size = 0.255, skew = 0.439
+*** Added sample 47, p_x = 0.634, p_y = 0.663, p_size = 0.270, skew = 0.314
+*** Added sample 48, p_x = 0.623, p_y = 0.687, p_size = 0.270, skew = 0.510
+*** Added sample 49, p_x = 0.624, p_y = 0.692, p_size = 0.219, skew = 1.000
+*** Added sample 50, p_x = 0.757, p_y = 0.729, p_size = 0.344, skew = 0.107
+*** Added sample 51, p_x = 0.704, p_y = 0.823, p_size = 0.371, skew = 0.041
+*** Added sample 52, p_x = 0.762, p_y = 0.836, p_size = 0.331, skew = 0.223
+*** Added sample 53, p_x = 0.763, p_y = 0.805, p_size = 0.317, skew = 0.391
+*** Added sample 54, p_x = 0.693, p_y = 0.336, p_size = 0.334, skew = 0.252
+*** Added sample 55, p_x = 0.699, p_y = 0.430, p_size = 0.310, skew = 0.070
+*** Added sample 56, p_x = 0.729, p_y = 0.481, p_size = 0.296, skew = 0.315
+*** Added sample 57, p_x = 0.746, p_y = 0.480, p_size = 0.281, skew = 0.494
+*** Added sample 58, p_x = 0.523, p_y = 0.556, p_size = 0.324, skew = 0.302
+*** Added sample 59, p_x = 0.545, p_y = 0.650, p_size = 0.297, skew = 0.675
+*** Added sample 60, p_x = 0.730, p_y = 0.650, p_size = 0.313, skew = 0.646
+('D = ', [-0.055084795266916835, 0.10955260226175582, 0.0010267092160824505, -0.007405547899739745, 0.0])
+('K = ', [521.0387900172475, 0.0, 336.648698497829, 0.0, 514.4191444901016, 234.55369866529753, 0.0, 0.0, 1.0])
+('R = ', [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0])
+('P = ', [525.203369140625, 0.0, 330.9981417382369, 0.0, 0.0, 522.9151611328125, 235.22661807680197, 0.0, 0.0, 0.0, 1.0, 0.0])
+None
+# oST version 5.0 parameters
+
+
+[image]
+
+width
+640
+
+height
+480
+
+[narrow_stereo]
+
+camera matrix
+521.038790 0.000000 336.648698
+0.000000 514.419144 234.553699
+0.000000 0.000000 1.000000
+
+distortion
+-0.055085 0.109553 0.001027 -0.007406 0.000000
+
+rectification
+1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 0.000000 1.000000
+
+projection
+525.203369 0.000000 330.998142 0.000000
+0.000000 522.915161 235.226618 0.000000
+0.000000 0.000000 1.000000 0.000000
+
+
+('Wrote calibration data to', '/tmp/calibrationdata.tar.gz')
+('D = ', [-0.055084795266916835, 0.10955260226175582, 0.0010267092160824505, -0.007405547899739745, 0.0])
+('K = ', [521.0387900172475, 0.0, 336.648698497829, 0.0, 514.4191444901016, 234.55369866529753, 0.0, 0.0, 1.0])
+('R = ', [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0])
+('P = ', [525.203369140625, 0.0, 330.9981417382369, 0.0, 0.0, 522.9151611328125, 235.22661807680197, 0.0, 0.0, 0.0, 1.0, 0.0])
+# oST version 5.0 parameters
+
+
+[image]
+
+width
+640
+
+height
+480
+
+[narrow_stereo]
+
+camera matrix
+521.038790 0.000000 336.648698
+0.000000 514.419144 234.553699
+0.000000 0.000000 1.000000
+
+distortion
+-0.055085 0.109553 0.001027 -0.007406 0.000000
+
+rectification
+1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 0.000000 1.000000
+
+projection
+525.203369 0.000000 330.998142 0.000000
+0.000000 522.915161 235.226618 0.000000
+0.000000 0.000000 1.000000 0.000000
+
+
+QObject::~QObject: Timers cannot be stopped from another thread
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~/ros_ws/tb_sim/src/usb_cam$ ^C
+robot@robot-Lenovo-XiaoXin-Air-15IWL:~/ros_ws/tb_sim/src/usb_cam$ 
+
