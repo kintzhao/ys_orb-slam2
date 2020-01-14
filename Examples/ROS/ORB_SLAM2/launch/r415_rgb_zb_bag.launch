@@ -1,6 +1,6 @@
 <launch>
-  <arg name="path_voc" default="/home/robot/ros_ws/vslam/src/ORB_SLAM2/Vocabulary/ORBvoc.txt"/>
-  <arg name="path_conf" default="/home/robot/ros_ws/vslam/src/ORB_SLAM2/Examples/ROS/ORB_SLAM2/conf/r415_mono_zb.yaml"/>
+  <arg name="path_voc" default="$(find ORB_SLAM2)/../../../Vocabulary/ORBvoc.txt"/>
+  <arg name="path_conf" default="$(find ORB_SLAM2)/../../../Examples/ROS/ORB_SLAM2/conf/r415_mono_zb.yaml"/>
 
   <arg name="image_rgb" default="/camera/color/image_raw"/>
   <arg name="image_depth" default="/camera/depth/image_rect_raw"/>

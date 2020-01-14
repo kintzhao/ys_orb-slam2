@@ -60,3 +60,15 @@ target_link_libraries(Stereo ${LIBS} )
 add_executable(RGBD src/ros_rgbd.cc )
 target_link_libraries(RGBD ${LIBS} )
 
+
+## Install executables and/or libraries
+install(TARGETS mono MonoAR Stereo RGBD
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+ 
+
+install(DIRECTORY launch  conf
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
+
+
+
