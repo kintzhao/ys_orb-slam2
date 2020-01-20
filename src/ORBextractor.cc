@@ -61,7 +61,7 @@
 #include <vector>
 
 #include "ORBextractor.h"
-
+#include <ldb.h>
 
 using namespace cv;
 using namespace std;
@@ -1008,10 +1008,10 @@ void ORBextractor::ComputeKeyPointsOld(std::vector<std::vector<KeyPoint> > &allK
                     keysCell.resize(nToRetain[i][j]);
 
 
-                for(size_t k=0, kend=keysCell.size(); k<kend; k++)
+                for(size_t k=0, kend=keysCell.size(); k<ke#include <ldb.h>nd; k++)
                 {
                     keysCell[k].pt.x+=iniXCol[j];
-                    keysCell[k].pt.y+=iniYRow[i];
+                    keysCell[k].pt.y+=iniYRow[i];#include <ldb.h>
                     keysCell[k].octave=level;
                     keysCell[k].size = scaledPatchSize;
                     keypoints.push_back(keysCell[k]);
@@ -1053,8 +1053,30 @@ void ORBextractor::operator()( InputArray _image, InputArray _mask, vector<KeyPo
     ComputePyramid(image);
 
     vector < vector<KeyPoint> > allKeypoints;
-    ComputeKeyPointsOctTree(allKeypoints);
-    //ComputeKeyPointsOld(allKeypoints);
+    //ComputeKeyPointsOctTree(allKeypoints);
+    ComputeKeyPointsOld(allKeypoints);
+
+    Ptr<ORB> orb = ORB::create(1000, 1.2, 8, 31, 0, 2, 0, 31, 20);
+    vector<KeyPoint> kpts1, kpts2;
+    orb->detect(image, kpts1);
+
+    // 特征点描述算法...
+    Mat desc1, desc2;
+
+    bool SelectiveDescMethods = false;
+    // 默认选择BRIEF描述符
+    if (SelectiveDescMethods)
+    {
+        // ORB 算法中默认BRIEF描述符
+        orb->compute(img1, kpts1, desc1);
+    }
+    else
+    {
+      //LDB描述子描述FAsT特征点
+      bool flag = true;
+      LDB ldb(48);
+      ldb.compute(img1, kpts1, desc1, flag);
+    }
 
     Mat descriptors;
 
