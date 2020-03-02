@@ -1,5 +1,6 @@
 <launch>
   <arg name="path_voc" default="$(find ORB_SLAM2)/../../../Vocabulary/ORBvoc.txt"/>
+  <!--arg name="path_voc" default="$(find ORB_SLAM2)/../../../Vocabulary/zhenbei_F1_voc.yml"/-->
   <arg name="path_conf" default="$(find ORB_SLAM2)/../../../Examples/ROS/ORB_SLAM2/conf/r415_mono_zb.yaml"/>
 
   <arg name="image_rgb" default="/camera/color/image_raw"/>

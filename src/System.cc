@@ -25,6 +25,7 @@
 #include <thread>
 #include <pangolin/pangolin.h>
 #include <iomanip>
+#include <time.h>
 
 namespace ORB_SLAM2
 {
@@ -60,16 +61,21 @@ System::System(const string &strVocFile, const string &strSettingsFile, const eS
 
     //Load ORB Vocabulary
     cout << endl << "Loading ORB Vocabulary. This could take a while..." << endl;
-
+    clock_t start,end;
+    start=clock();
     mpVocabulary = new ORBVocabulary();
-    bool bVocLoad = mpVocabulary->loadFromTextFile(strVocFile);
+    bool bVocLoad = mpVocabulary->loadFromTextFile(strVocFile);//txt
+    //bool bVocLoad = mpVocabulary->load(strVocFile);//yml
     if(!bVocLoad)
     {
         cerr << "Wrong path to vocabulary. " << endl;
         cerr << "Falied to open at: " << strVocFile << endl;
         exit(-1);
     }
-    cout << "Vocabulary loaded!" << endl << endl;
+    end = clock();
+    double time_cost = (double)(end - start) / CLOCKS_PER_SEC;
+    cout << "Vocabulary loaded! time cost:"<<time_cost<< endl << endl;
+    cout << "Vocabulary information: " << endl << *mpVocabulary << endl << endl;
 
     //Create KeyFrame Database
     mpKeyFrameDatabase = new KeyFrameDatabase(*mpVocabulary);
