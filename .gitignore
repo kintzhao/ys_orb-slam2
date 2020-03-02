@@ -26,3 +26,11 @@ Thirdparty/g2o/build
 Vocabulary/ORBvoc.txt
 Examples/ROS/ORB_SLAM2/conf/calib
 
+ORBSLAM-ws.cflags
+ORBSLAM-ws.config
+ORBSLAM-ws.creator
+ORBSLAM-ws.creator.user
+ORBSLAM-ws.cxxflags
+ORBSLAM-ws.files
+ORBSLAM-ws.includes
+Vocabulary/
