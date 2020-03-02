@@ -108,9 +108,17 @@ System::System(const string &strVocFile, const string &strSettingsFile, const eS
         mpTracker->SetViewer(mpViewer);
     }
 
+    //Initialize the MapPublisher thread and launch.
+    {
+        mpMapPublisher = new MapPublisher(mpMap);
+        mptMapPublisher = new thread(&MapPublisher::Refresh, mpMapPublisher);
+    }
+
     //Set pointers between threads
     mpTracker->SetLocalMapper(mpLocalMapper);
     mpTracker->SetLoopClosing(mpLoopCloser);
+
+    mpTracker->SetMapPublisher(mpMapPublisher);
 
     mpLocalMapper->SetTracker(mpTracker);
     mpLocalMapper->SetLoopCloser(mpLoopCloser);
@@ -172,6 +180,7 @@ cv::Mat System::TrackStereo(const cv::Mat &imLeft, const cv::Mat &imRight, const
 
 cv::Mat System::TrackRGBD(const cv::Mat &im, const cv::Mat &depthmap, const double &timestamp)
 {
+    LOG(INFO)<<" System::TrackRGBD";
     if(mSensor!=RGBD)
     {
         cerr << "ERROR: you called TrackRGBD but input sensor was not set to RGBD." << endl;

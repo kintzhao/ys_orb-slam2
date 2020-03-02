@@ -163,6 +163,10 @@ void Tracking::SetViewer(Viewer *pViewer)
     mpViewer=pViewer;
 }
 
+void Tracking::SetMapPublisher(MapPublisher *pMapPublisher)
+{
+    mpMapPublisher = pMapPublisher;
+}
 
 cv::Mat Tracking::GrabImageStereo(const cv::Mat &imRectLeft, const cv::Mat &imRectRight, const double &timestamp)
 {
@@ -432,6 +436,7 @@ void Tracking::Track()
                 mVelocity = cv::Mat();
 
             mpMapDrawer->SetCurrentCameraPose(mCurrentFrame.mTcw);
+            mpMap->setCameraPose(mCurrentFrame.mTcw);
 
             // Clean VO matches
             for(int i=0; i<mCurrentFrame.N; i++)
@@ -452,6 +457,8 @@ void Tracking::Track()
                 delete pMP;
             }
             mlpTemporalPoints.clear();
+
+            mpMapPublisher->SetCurrentCameraPose(mCurrentFrame.mTcw);
 
             // Check if we need to insert a new keyframe
             if(NeedNewKeyFrame())
@@ -556,6 +563,8 @@ void Tracking::StereoInitialization()
 
         mpMapDrawer->SetCurrentCameraPose(mCurrentFrame.mTcw);
 
+        mpMap->setCameraPose(mCurrentFrame.mTcw);
+        mpMapPublisher->SetCurrentCameraPose(pKFini->GetPose());
         mState=OK;
     }
 }
@@ -728,10 +737,12 @@ void Tracking::CreateInitialMapMonocular()
     mLastFrame = Frame(mCurrentFrame);
 
     mpMap->SetReferenceMapPoints(mvpLocalMapPoints);
-
     mpMapDrawer->SetCurrentCameraPose(pKFcur->GetPose());
+    mpMap->setCameraPose(pKFcur->GetPose());
 
     mpMap->mvpKeyFrameOrigins.push_back(pKFini);
+
+    mpMapPublisher->SetCurrentCameraPose(pKFcur->GetPose());
 
     mState=OK;
 }

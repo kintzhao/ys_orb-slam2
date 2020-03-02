@@ -52,6 +52,13 @@ public:
     std::vector<MapPoint*> GetAllMapPoints();
     std::vector<MapPoint*> GetReferenceMapPoints();
 
+    void setCameraPose(const cv::Mat &Tcw);
+    cv::Mat getCameraPose();
+    bool isCamUpdated();
+    void ResetCamFlag();
+    bool isMapUpdated();
+    void ResetUpdated();
+
     long unsigned int MapPointsInMap();
     long unsigned  KeyFramesInMap();
 
@@ -78,6 +85,11 @@ protected:
     int mnBigChangeIdx;
 
     std::mutex mMutexMap;
+
+    bool mbMapUpdated;
+
+    cv::Mat mCameraPose;
+    bool mbCameraUpdated;
 };
 
 } //namespace ORB_SLAM

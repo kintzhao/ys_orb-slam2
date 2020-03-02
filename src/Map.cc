@@ -25,7 +25,7 @@
 namespace ORB_SLAM2
 {
 
-Map::Map():mnMaxKFid(0),mnBigChangeIdx(0)
+Map::Map():mnMaxKFid(0),mnBigChangeIdx(0),mbMapUpdated(false)
 {
 }
 
@@ -35,19 +35,21 @@ void Map::AddKeyFrame(KeyFrame *pKF)
     mspKeyFrames.insert(pKF);
     if(pKF->mnId>mnMaxKFid)
         mnMaxKFid=pKF->mnId;
+    mbMapUpdated=true;
 }
 
 void Map::AddMapPoint(MapPoint *pMP)
 {
     unique_lock<mutex> lock(mMutexMap);
     mspMapPoints.insert(pMP);
+    mbMapUpdated=true;
 }
 
 void Map::EraseMapPoint(MapPoint *pMP)
 {
     unique_lock<mutex> lock(mMutexMap);
     mspMapPoints.erase(pMP);
-
+    mbMapUpdated=true;
     // TODO: This only erase the pointer.
     // Delete the MapPoint
 }
@@ -65,6 +67,7 @@ void Map::SetReferenceMapPoints(const vector<MapPoint *> &vpMPs)
 {
     unique_lock<mutex> lock(mMutexMap);
     mvpReferenceMapPoints = vpMPs;
+    mbMapUpdated=true;
 }
 
 void Map::InformNewBigChange()
@@ -128,6 +131,44 @@ void Map::clear()
     mnMaxKFid = 0;
     mvpReferenceMapPoints.clear();
     mvpKeyFrameOrigins.clear();
+}
+
+cv::Mat Map::getCameraPose() {
+
+  unique_lock<mutex> lock(mMutexMap);
+  return mCameraPose;
+
+}
+
+void Map::setCameraPose(const cv::Mat &Tcw) {
+
+  unique_lock<mutex> lock(mMutexMap);
+  mCameraPose = Tcw.clone();
+  mbCameraUpdated = true;
+}
+
+bool Map::isCamUpdated()
+{
+  unique_lock<mutex> lock(mMutexMap);
+  return mbCameraUpdated;
+}
+
+void Map::ResetCamFlag()
+{
+  unique_lock<mutex> lock(mMutexMap);
+  mbCameraUpdated = false;
+}
+
+bool Map::isMapUpdated()
+{
+    unique_lock<mutex> lock(mMutexMap);
+    return mbMapUpdated;
+}
+
+void Map::ResetUpdated()
+{
+    unique_lock<mutex> lock(mMutexMap);
+    mbMapUpdated=false;
 }
 
 } //namespace ORB_SLAM
